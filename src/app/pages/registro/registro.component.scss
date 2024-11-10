@@ -1,0 +1,48 @@
+/* Estilos generales para el formulario */
+form {
+  padding: 10px; /* Espacio alrededor del formulario */
+  background-color: #0aaef4; /* Fondo gris claro para el formulario */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 10px 10px rgba(18, 170, 225, 0.936); /* Sombra suave alrededor del formulario */
+  margin: 20px;
+}
+
+ion-item {
+  margin-bottom: 15px; /* Espacio entre los campos */
+  --highlight-color: #779ad6; /* Color del borde de los input cuando están enfocados */
+}
+
+ion-label {
+  font-weight: bold; /* Texto en negrita para los labels */
+  color: #3880ff; /* Color azul para los labels */
+}
+
+/* Estilo de los inputs */
+ion-input {
+  --padding-start: 10px; /* Espaciado interno */
+  --background: #ffffff00; /* Fondo blanco para los campos de texto */
+  --border-radius: 5px; /* Bordes redondeados para los inputs */
+  --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  --border-color: #dcdcdc; /* Borde gris claro por defecto */
+}
+
+/* Estilo del botón de envío */
+ion-button {
+  --background: #031028; /* Fondo azul oscuro */
+  --border-radius: 20px; /* Bordes redondeados para el botón */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  --padding-top: 10px; /* Relleno en la parte superior */
+  --padding-bottom: 10px; /* Relleno en la parte inferior */
+  --color: #f1eaea; /* Texto en color blanco */
+  font-weight: bold; /* Texto en negrita */
+  margin-top: 20px; /* Espacio arriba del botón */
+  width: 80%; /* El botón ocupará el 80% del ancho disponible */
+  margin-left: auto; /* Centra el botón a la izquierda */
+  margin-right: auto; /* Centra el botón a la derecha */
+  display: block; /* Asegura que el botón sea un bloque y se pueda centrar */
+}
+
+ion-button:disabled {
+  --background: #cccccc; /* Fondo gris cuando el botón está deshabilitado */
+  --color: #7f7f7f; /* Texto gris cuando el botón está deshabilitado */
+}

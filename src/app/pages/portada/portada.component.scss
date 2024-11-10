@@ -1,0 +1,47 @@
+/* Estilo para el mensaje de bienvenida */
+.welcome-message {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--ion-color-primary);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Centrar el contenido dentro del ion-content */
+  ion-content {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
+  }
+  
+  /* Estilo de la lista de botones (ahora como tarjetas) */
+  ion-list {
+    width: 80%;
+    max-width: 380px;
+    margin-top: 18px; /* Separación desde el mensaje de bienvenida */
+  }
+  
+  /* Estilo para cada ion-card (cuadro) */
+  ion-card {
+    margin: 10px 0; /* Separación entre los cuadros */
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos de transición */
+  }
+  
+  /* Efecto hover en el ion-card */
+  ion-card:hover {
+    transform: translateY(-5px); /* Eleva el cuadro ligeramente */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el ratón */
+  }
+  
+  /* Estilo para el título dentro del ion-card */
+  ion-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  

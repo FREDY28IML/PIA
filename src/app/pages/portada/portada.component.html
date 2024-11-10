@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Bienvenido
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <!-- Título de bienvenida -->
+    <div class="welcome-message">
+      <h2>Selecciona una Opción</h2>
+    </div>
+  
+    <!-- Botones de opción como cuadros -->
+    <ion-card button (click)="goToRegistro()">
+        <ion-card-header>
+          <ion-icon name="person-add" slot="start"></ion-icon>
+          <ion-card-title>Registro</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      
+      <ion-card button (click)="goToConsulta()">
+        <ion-card-header>
+          <ion-icon name="search" slot="start"></ion-icon>
+          <ion-card-title>Consulta</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      
+      <ion-card button (click)="goToReservasCitas()">
+        <ion-card-header>
+          <ion-icon name="calendar" slot="start"></ion-icon>
+          <ion-card-title>Reservas de Citas</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      
+  
