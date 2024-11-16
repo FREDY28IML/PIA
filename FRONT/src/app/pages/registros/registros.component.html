@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Bienvenido
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="image-container">
+    <img src="../assets/img/4.png" width="100" height="100" class="welcome-image" />
+  </div>
+
+  <!-- Botones de opción como cuadros -->
+  <ion-card button (click)="goToRegistro()">
+      <ion-card-header>
+        <ion-icon name="person-add" slot="start"></ion-icon>
+        <ion-card-title>Registro Paciente</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    
+    <ion-card button (click)="goToCollab()">
+      <ion-card-header>
+        <ion-icon name="search" slot="start"></ion-icon>
+        <ion-card-title>Registro Colaborador</ion-card-title>
+      </ion-card-header>
+    </ion-card>

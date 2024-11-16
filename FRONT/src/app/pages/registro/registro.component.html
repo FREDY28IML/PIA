@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Formulario Reactivo -->
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    
+    <!-- Nombre -->
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre" type="text" required></ion-input>
+    </ion-item>
+
+    <!-- Edad -->
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input formControlName="edad" type="number" required></ion-input>
+    </ion-item>
+
+    <!-- Número de Teléfono -->
+    <ion-item>
+      <ion-label position="floating">Número de Teléfono</ion-label>
+      <ion-input formControlName="telefono" type="number" required></ion-input>
+    </ion-item>
+
+    <!-- Observaciones -->
+    <ion-item>
+      <ion-label position="floating">Observaciones</ion-label>
+      <ion-textarea formControlName="observaciones" rows="5" cols="36"></ion-textarea>
+    </ion-item>
+
+    <!-- Botón de Enviar -->
+    <ion-button expand="full" type="submit" [disabled]="registroForm.invalid">
+      Registrar Usuario
+    </ion-button>
+  </form>
+</ion-content>

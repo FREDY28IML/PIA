@@ -1,0 +1,39 @@
+ion-grid {
+    margin: 16px; /* Espaciado alrededor de la tabla */
+    border: 1px solid #ccc; /* Borde de la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo suave */
+  
+    ion-row {
+      border-bottom: 1px solid #e0e0e0; /* Separador entre filas */
+      
+      &:last-child {
+        border-bottom: none; /* Eliminar el borde de la última fila */
+      }
+    }
+  
+    ion-col {
+      padding: 8px; /* Espaciado interno */
+      font-size: 14px; /* Tamaño de fuente */
+      text-align: center; /* Centrar el texto */
+      word-wrap: break-word; /* Ajustar palabras largas */
+    }
+  
+    /* Encabezados de tabla */
+    ion-row:first-child {
+      background-color: #2741d4; /* Fondo verde */
+      color: white; /* Texto blanco */
+      font-weight: bold; /* Texto en negrita */
+      border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+    }
+  
+    /* Alternar colores para filas */
+    ion-row:nth-child(odd):not(:first-child) {
+      background-color: #f1f1f1; /* Fondo para filas impares */
+    }
+  
+    ion-row:nth-child(even):not(:first-child) {
+      background-color: #ffffff; /* Fondo para filas pares */
+    }
+  }
+  

@@ -1,0 +1,57 @@
+/* Estilos generales para el contenido */
+.content {
+    display: flex; /* Usamos flexbox para organizar los elementos */
+    flex-direction: column; /* Los elementos van en columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: 100%; /* Asegura que ocupe toda la altura de la pantalla */
+    text-align: center; /* Centra el texto */
+  }
+  
+  /* Contenedor de la imagen */
+  .image-container {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    margin-bottom: 20px; /* Un poco de espacio debajo de la imagen */
+  }
+  
+  /* Estilo de la imagen */
+  .welcome-image {
+    width: 80%; /* La imagen ocupará el 80% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-width: 600px; /* Limita el tamaño máximo a 600px */
+  }
+  
+  /* Estilos del botón */
+  .enter-button {
+    --background: #031028; /* Fondo azul oscuro */
+    --border-radius: 20px; /* Bordes redondeados */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    --padding-top: 10px; /* Relleno en la parte superior */
+    --padding-bottom: 10px; /* Relleno en la parte inferior */
+    --color: #f1eaea; /* Texto en blanco */
+    font-weight: bold; /* Texto en negrita */
+    margin: 20px; /* Espacio alrededor del botón */
+  }
+  
+.content {
+    display: flex; /* Utilizamos flexbox */
+    flex-direction: column; /* Alineamos el contenido en una columna */
+    justify-content: flex-end; /* Colocamos el contenido (el botón) al final de la pantalla */
+    height: 100%; /* Asegura que el contenido ocupe todo el alto de la pantalla */
+  }
+  
+  .enter-button {
+    --background: #031028; /* Fondo azul oscuro */
+    --border-radius: 20px; /* Bordes redondeados */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    --padding-top: 10px; /* Relleno en la parte superior */
+    --padding-bottom: 10px; /* Relleno en la parte inferior */
+    --color: #f1eaea; /* Texto en blanco */
+    font-weight: bold; /* Texto en negrita */
+    margin: 20px; /* Espacio alrededor del botón */
+  }
+  
+  
+  
