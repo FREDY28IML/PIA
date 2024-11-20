@@ -45,12 +45,11 @@ enrutador.get('/citas/detalle/:id', (req,res)=>{
 enrutador.post('/empleados/create', (req,res)=>{
     const id= req.body.documento;
     const nom = req.body.nombres;
-    const ape = req.body.apellidos;
     const cel = req.body.telefono;
     const ed = req.body.edad;
     const nurse = req.body.enfermero;
 
-    controllerE.register(id,nom,ape,cel,ed,nurse)
+    controllerE.register(id,nom,cel,ed,nurse)
         .then((items) => {
             if (items) {
                 resp.success(req, res, 200, 'Registro insertado exitosamente');
@@ -82,12 +81,11 @@ enrutador.get('/empleados/consulta', (req,res)=>{
 enrutador.post('/pacientes/create', (req,res)=>{
     const id= req.body.documento;
     const nom = req.body.nombres;
-    const ape = req.body.apellidos;
     const cel = req.body.telefono;
     const ed = req.body.edad;
     const obs = req.body.obs;
 
-    controllerP.register(id,nom,ape,cel,ed,obs)
+    controllerP.register(id,nom,cel,ed,obs)
         .then((items) => {
             if (items) {
                 resp.success(req, res, 200, 'Registro insertado exitosamente');

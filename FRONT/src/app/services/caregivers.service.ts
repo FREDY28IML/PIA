@@ -5,6 +5,8 @@ import { IApiResponse } from '../models/IApiResponse.interface';
 import { IResCita } from '../models/citas/IResCitas.interface';
 import { IResCollab } from '../models/collab/IResCollab.interface';
 import { IResPaciente } from '../models/paciente/IResPaciente.interface';
+import { IReqPaciente } from '../models/paciente/IReqPaciente.interface';
+import { IReqCollab } from '../models/collab/IReqCollab.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -24,9 +26,19 @@ export class ServicioCuidadoresService {
     return this.http.get<IApiResponse<IResCollab[]>>(url);
   }
 
+  setCollab(data: IReqCollab): Observable<IApiResponse<IResCollab[]>> {
+    let url = `${this.apiUrl}/empleados/create`;
+    return this.http.post<IApiResponse<IResCollab[]>>(url,data);
+  }
+
   getPaciente(): Observable<IApiResponse<IResPaciente[]>> {
     let url = `${this.apiUrl}/pacientes/consulta`;
     return this.http.get<IApiResponse<IResPaciente[]>>(url);
+  }
+
+  setPaciente(data: IReqPaciente): Observable<IApiResponse<IResPaciente[]>> {
+    let url = `${this.apiUrl}/pacientes/create`;
+    return this.http.post<IApiResponse<IResPaciente[]>>(url,data);
   }
 
 }

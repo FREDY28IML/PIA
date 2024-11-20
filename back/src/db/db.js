@@ -51,7 +51,16 @@ function getAllCitas(entidad){
 
 function getAllPacientes(entidad){
     return new Promise((resolve, reject) => {
-        conn.query(`SELECT u_paciente.nombres AS paciente, p.observaciones, u_paciente.edad FROM visita tv JOIN paciente p ON tv.idPaciente = p.idUsuario JOIN usuarios u_paciente ON p.idUsuario = u_paciente.idUsuario`, (error, result) => {
+        conn.query(`SELECT 
+    u_paciente.nombres AS paciente, 
+    p.observaciones, 
+    u_paciente.edad 
+FROM 
+    paciente p
+JOIN 
+    usuarios u_paciente 
+ON 
+    p.idUsuario = u_paciente.idUsuario;`, (error, result) => {
             if(error)
                 return reject(error);
             
@@ -62,7 +71,17 @@ function getAllPacientes(entidad){
 
 function getAllColaboradores(entidad){
     return new Promise((resolve, reject) => {
-        conn.query(`SELECT u_empleado.nombres AS cuidador, u_empleado.celular, u_empleado.edad, e.enfermero FROM visita tv JOIN empleado e ON tv.idEmpleado = e.idUsuario JOIN usuarios u_empleado ON e.idUsuario = u_empleado.idUsuario;`, (error, result) => {
+        conn.query(`SELECT 
+    u_empleado.nombres AS cuidador, 
+    u_empleado.celular, 
+    u_empleado.edad ,
+    e.enfermero
+FROM 
+    empleado e
+JOIN 
+    usuarios u_empleado 
+ON 
+    e.idUsuario = u_empleado.idUsuario;`, (error, result) => {
             if(error)
                 return reject(error);
             
@@ -82,11 +101,11 @@ function getById(entidad,id){
     } );
 }
 
-function registerEmployed(entidad, id, nom, ape, cel, ed, nurse) {
+function registerEmployed(entidad, id, nom, cel, ed, nurse) {
     return new Promise((resolve, reject) => {
         // Inserción en la tabla 'usuarios'
-        const queryUsuario = `INSERT INTO usuarios (idUsuario, nombres, apellidos, celular, edad) VALUES (?, ?, ?, ?, ?)`;
-        const usuarioValues = [id, nom, ape, cel, ed];
+        const queryUsuario = `INSERT INTO usuarios (idUsuario, nombres, celular, edad) VALUES (?, ?, ?, ?)`;
+        const usuarioValues = [id, nom, cel, ed];
         
         conn.query(queryUsuario, usuarioValues, (error, result) => {
             if (error) {
@@ -109,11 +128,11 @@ function registerEmployed(entidad, id, nom, ape, cel, ed, nurse) {
 }
 
 
-function registerPatient(entidad,id,nom,ape,cel,ed,obs){
+function registerPatient(entidad,id,nom,cel,ed,obs){
     return new Promise((resolve, reject) => {
         // Inserción en la tabla 'usuarios'
-        const queryUsuario = `INSERT INTO usuarios (idUsuario, nombres, apellidos, celular, edad) VALUES (?, ?, ?, ?, ?)`;
-        const usuarioValues = [id, nom, ape, cel, ed];
+        const queryUsuario = `INSERT INTO usuarios (idUsuario, nombres, celular, edad) VALUES (?, ?, ?, ?)`;
+        const usuarioValues = [id, nom, cel, ed];
         
         conn.query(queryUsuario, usuarioValues, (error, result) => {
             if (error) {

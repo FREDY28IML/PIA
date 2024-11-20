@@ -42,45 +42,20 @@ export const routes: Routes = [
         component: ConsultaComponent
     },
     {
-        path: '',
-        redirectTo: 'registros',
-        pathMatch: 'full'
-    },
-    {
         path: 'registros',
         component: RegistrosComponent
     },
     {
-        path: '',
-        redirectTo: 'registroCollab',
-        pathMatch: 'full'
-    },
-    {
-        path: 'registroCollab',
+        path: 'registro-collab',
         component: RegistroCollabComponent
-    },
-    {
-        path: '',
-        redirectTo: 'pacientes',
-        pathMatch: 'full'
     },
     {
         path: 'pacientes',
         component: PacientesComponent
     },
     {
-        path: '',
-        redirectTo: 'colaboradores',
-        pathMatch: 'full'
-    },
-    {
         path: 'colaboradores',
         component: ColaboradoresComponent
-    },
-    {
-        path: '',
-        redirectTo: 'citas',
-        pathMatch: 'full'
     },
     {
         path: 'citas',

@@ -9,8 +9,8 @@ function getById(id){
     return db.getById(Entidad,id)
 }
 
-function register(id,nom,ape,cel,ed,nurse){
-    return db.registerEmployed(Entidad,id,nom,ape,cel,ed,nurse)
+function register(id,nom,cel,ed,nurse){
+    return db.registerEmployed(Entidad,id,nom,cel,ed,nurse)
 }
 
 module.exports = {

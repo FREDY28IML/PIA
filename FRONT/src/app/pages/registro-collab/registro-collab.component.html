@@ -1,23 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Registro de Usuario</ion-title>
+    <ion-title>Registro de Colaboradores</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <!-- Formulario Reactivo -->
-  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit(registroForm.value)">
+
+    <!-- Edad -->
+    <ion-item>
+      <ion-label position="floating">Número de Documento</ion-label>
+      <ion-input formControlName="documento" type="number" required></ion-input>
+    </ion-item>
     
     <!-- Nombre -->
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
-      <ion-input formControlName="nombre" type="text" required></ion-input>
-    </ion-item>
-
-    <!-- Edad -->
-    <ion-item>
-      <ion-label position="floating">Edad</ion-label>
-      <ion-input formControlName="edad" type="number" required></ion-input>
+      <ion-input formControlName="nombres" type="text" required></ion-input>
     </ion-item>
 
     <!-- Número de Teléfono -->
@@ -26,15 +26,21 @@
       <ion-input formControlName="telefono" type="number" required></ion-input>
     </ion-item>
 
+    <!-- Edad -->
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input formControlName="edad" type="number" required></ion-input>
+    </ion-item>
+
     <!-- ¿Es Enfermero? -->
     <ion-item>
       <ion-label>¿Es Enfermero?</ion-label>
-      <ion-checkbox slot="end" formControlName="esEnfermero"></ion-checkbox>
+      <ion-checkbox slot="end" formControlName="enfermero"></ion-checkbox>
     </ion-item>
 
     <!-- Botón de Enviar -->
     <ion-button expand="full" type="submit" >
-      Registrar Usuario
+      Registrar Collaborador
     </ion-button>
   </form>
 </ion-content>
